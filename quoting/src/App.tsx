@@ -5,9 +5,15 @@ import Button from "./components/Ui/Button";
 import AllCategory from "./components/AllCategory";
 import Footer from "./components/Footer";
 
+interface QuoteProp {
+  author: string;
+  category: string;
+  quote: string;
+}
+
 export default function App() {
   const [category, setCategory] = useState<string>("age");
-  const [quote, setQuote] = useState<string | null>(null);
+  const [quote, setQuote] = useState<QuoteProp | null>(null);
   const [error, setError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 

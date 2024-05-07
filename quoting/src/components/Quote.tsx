@@ -1,6 +1,10 @@
 interface QuoteProps {
   isLoading: boolean;
-  quote: object;
+  quote: {
+    author: string;
+    category: string;
+    quote: string;
+  } | null; // Make quote nullable to handle loading state
   category: string;
 }
 
