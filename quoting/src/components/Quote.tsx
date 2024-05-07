@@ -1,11 +1,17 @@
-export default function Quote({ isLoading, quote, category }) {
+interface QuoteProps {
+  isLoading: boolean;
+  quote: object;
+  category: string;
+}
+
+export default function Quote({ isLoading, quote, category }: QuoteProps) {
   return (
     <>
       {isLoading ? (
         <h1>Loading....</h1>
       ) : (
         <>
-          <div className="mb-3 max-w-md">
+          <div className="mb-3">
             <h1 className="text-2xl font-bold">{quote?.author}</h1>
             <h3 className="text-lg">
               category: <span className="capitalize">{category}</span>

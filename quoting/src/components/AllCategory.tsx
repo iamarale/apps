@@ -67,10 +67,17 @@ const allCategories = [
   "movies",
   "success",
 ];
-export default function AllCategory({ category, setCategory }) {
+interface AllCategoryProps {
+  setCategory: (category: string) => void;
+  category: string;
+}
+export default function AllCategory({
+  category,
+  setCategory,
+}: AllCategoryProps) {
   return (
     <select
-      className="border-[2px] rounded"
+      className="border-[2px] border-blue-500 rounded"
       value={category}
       onChange={(e) => setCategory(e.target.value)}
     >
