@@ -43,9 +43,9 @@ export default function App() {
 
   // if (error) return <h1>You've gotten an error lol..</h1>;
   return (
-    <main className="h-full flex flex-col">
+    <main className="h-full flex flex-col bg-neutral-900 text-neutral-300">
       <Header />
-      <div className="flex container mx-auto mb-2 max-w-2xl">
+      <div className="flex container mx-auto  max-w-2xl mb-6">
         <h1>Select a category:</h1>
         <AllCategory category={category} setCategory={setCategory} />
       </div>

@@ -77,7 +77,7 @@ export default function AllCategory({
 }: AllCategoryProps) {
   return (
     <select
-      className="border-[2px] border-blue-500 rounded"
+      className="mx-2 border-[1px] border-blue-500 rounded bg-neutral-900 text-neutral-300"
       value={category}
       onChange={(e) => setCategory(e.target.value)}
     >
